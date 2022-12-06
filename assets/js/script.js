@@ -1,4 +1,8 @@
-var baseUrl = "https://ridb.recreation.gov/api/v1"
+var apiKey = "eed7d646-5122-4f56-acec-03d9654afba8";
+var baseUrl = "https://ridb.recreation.gov/api/v1";
+var campsites = "/campsites";
+var media = "/media";
+var recareas = "/recareas";
 
 fetch('https://ridb.recreation.gov/api/v1/campsites?limit=50&offset=0',{
     
