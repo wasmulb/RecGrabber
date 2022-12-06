@@ -1,3 +1,4 @@
+var baseUrl = "https://ridb.recreation.gov/api/v1"
 
 fetch('https://ridb.recreation.gov/api/v1/campsites?limit=50&offset=0',{
     
