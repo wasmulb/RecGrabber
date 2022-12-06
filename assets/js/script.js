@@ -12,3 +12,9 @@ fetch('https://ridb.recreation.gov/api/v1/campsites?limit=50&offset=0',{
   .then(function (data) {
     console.log(data);
   });
+
+
+
+
+
+//
