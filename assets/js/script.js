@@ -23,20 +23,27 @@ function recreationAPI() {
         })
         .then(function(data){
             console.log(data);
-            for(let i = 0; i < data.length; i ++){
-                if (data[i].lat !== "0.0000"){
-                    console.log(data[i])
-                }else {
-                    return null
-                }
+            var cleanArray = Object.values(data).filter(function(item){
+              return item.lat !== "0.0000"
+        
 
-            }
+            })
+            console.log(cleanArray)
+            // for(let i = 0; i < data.length; i ++){
+            //     if (data[i].lat !== "0.0000"){
+            //         console.log(data[i])
+            //     }else {
+            //         return null
+            //     }
+
+        //     }
         })
         .catch(err => console.error(err));
 
 
 
 }
+
 
 
 inputSearch.on('keyup', function(){
