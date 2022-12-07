@@ -68,13 +68,24 @@
   .input-group-rounded .input-group-field {
     border-radius: 5000px 0 0 5000px;
     padding-left: 1rem;
+    margin-left: 50px;
   }
   
   .input-group-rounded .input-group-button .button {
     border-radius: 0 5000px 5000px 0;
     font-size: 0.8rem;
   }
+  /* Media Query for nav bar*/
+  @media screen and (max-width: 980px){
+    .subnav-hero-section{
+      flex-direction: column;
+    }
 
+    .input-group>:last-child {
+      margin-right: 35px;
+
+    }  
+  }
   /* Slideshow */
 
   .hero-section {
