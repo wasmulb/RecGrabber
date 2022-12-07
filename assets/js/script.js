@@ -1,36 +1,36 @@
+
+var inputSearch = $('#input-search');
+var cityName = inputSearch.val();
+var btn = $('#btn');
+//API
 var apiKey = "219f127985msh142e87da4505be5p148cebjsn56aa6095e26c";
-var queryUrl = "https://trailapi-trailapi.p.rapidapi.com/trails/explore/?'{cityName}'";
-
-
-
-//Grabbing Element from HTML
-inputSearch = $('#input-search');
-userInput = inputSearch.val()
-btn = $('#btn');
-
+var queryUrl = 'https://trailapi-trailapi.p.rapidapi.com/activity/?q-city_cont=';
 
 function recreationAPI() {
-    fetch(queryUrl, {
 
-
+    const options = {
+        method: 'GET',
         headers: {
-            apikey: "219f127985msh142e87da4505be5p148cebjsn56aa6095e26c"
+            'X-RapidAPI-Key': '219f127985msh142e87da4505be5p148cebjsn56aa6095e26c',
+            'X-RapidAPI-Host': 'trailapi-trailapi.p.rapidapi.com'
         }
-    })
-        .then(function (response) {
-            console.log(response);
-        })
-        .then(function (data) {
-            console.log(data);
-        });
+    };
+
+    fetch(queryUrl + cityName, options)
+
+        .then(response => response.json())
+        .then(response => console.log(response))
+        .catch(err => console.error(err));
 }
 
 
 inputSearch.on('keyup', function(){
-    userInput = inputSearch.val();
-    recreationAPI();
+    cityName = inputSearch.val();
+
 })
 
 btn.on('click', function(e){
     e.preventDefault();
+    recreationAPI();
+    console.log(cityName)
 })
