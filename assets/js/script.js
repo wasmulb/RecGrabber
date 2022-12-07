@@ -1,8 +1,6 @@
-var apiKey = "eed7d646-5122-4f56-acec-03d9654afba8";
-var baseUrl = "https://ridb.recreation.gov/api/v1";
-var campsites = "/campsites";
-var media = "/media";
-var recareas = "/recareas";
+var apiKey = "219f127985msh142e87da4505be5p148cebjsn56aa6095e26c";
+var queryUrl = "https://trailapi-trailapi.p.rapidapi.com/trails/explore/?'{cityName}'";
+
 
 
 //Grabbing Element from HTML
@@ -12,10 +10,10 @@ btn = $('#btn');
 
 
 function recreationAPI() {
-    fetch('https://ridb.recreation.gov/api/v1/campsites?limit=50&offset=0', {
+    fetch(queryUrl, {
 
         headers: {
-            apikey: "eed7d646-5122-4f56-acec-03d9654afba8"
+            apikey: "219f127985msh142e87da4505be5p148cebjsn56aa6095e26c"
         }
     })
         .then(function (response) {
