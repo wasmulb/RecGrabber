@@ -12,6 +12,7 @@ btn = $('#btn');
 function recreationAPI() {
     fetch(queryUrl, {
 
+
         headers: {
             apikey: "219f127985msh142e87da4505be5p148cebjsn56aa6095e26c"
         }
