@@ -18,9 +18,24 @@ function recreationAPI() {
 
     fetch(queryUrl + cityName, options)
 
-        .then(response => response.json())
-        .then(response => console.log(response))
+        .then(function(response){
+            return response.json();
+        })
+        .then(function(data){
+            console.log(data);
+            for(let i = 0; i < data.length; i ++){
+                if (data[i].lat !== "0.0000"){
+                    console.log(data[i])
+                }else {
+                    return null
+                }
+
+            }
+        })
         .catch(err => console.error(err));
+
+
+
 }
 
 
