@@ -1,6 +1,7 @@
 var inputSearch = $('#input-search');
 var cityName = inputSearch.val();
 var btn = $('#btn');
+var resultsPage = $('#results-page')
 //API
 var apiKey = "219f127985msh142e87da4505be5p148cebjsn56aa6095e26c";
 var queryUrl = 'https://trailapi-trailapi.p.rapidapi.com/activity/?q-city_cont=';
@@ -28,20 +29,71 @@ function recreationAPI() {
             let activitiesA={
                 "camping":[],
                 "hiking":[],
-                "mountain biking":[]
+                "biking":[]
             }
             for (let i = 0; i < cleanArray.length; i ++){
                 if("camping" in cleanArray[i].activities){
                     activitiesA.camping.push(cleanArray[i]);
                 }
                 if("mountain biking" in cleanArray[i].activities){
-                    activitiesA["mountain biking"].push(cleanArray[i]);
+                    activitiesA["biking"].push(cleanArray[i]);
                 }
                 if ("hiking" in cleanArray[i].activities){
                     activitiesA.hiking.push(cleanArray[i]);
                 }
 
             }
+            // Dynamically create divs
+            var hikingDiv = document.createElement("h2")
+            var campDiv = document.createElement("h2")
+            var bikingDiv = document.createElement("h2")
+
+            for(var i = 0; i<activitiesA.camping.length; i++){
+              var campCard = document.createElement("div")
+              var campName = document.createElement("p")
+              var campDes = document.createElement("p")
+              var campDir = document.createElement("p")
+              campName.innerText = "Name: "
+              campDes.innerText = "Description: "
+              campDir.innerText = "Directions: "
+              resultsPage.append(campCard)
+              campCard.append(campName)
+              campCard.append(campDes)
+              campCard.append(campDir)
+            }
+
+            for(var i = 0; i<activitiesA.hiking.length; i++){
+              var hikingCard = document.createElement("div")
+              var hikingName = document.createElement("p") 
+              var hikingDes = document.createElement("p")
+              var hikingDir = document.createElement("p")
+              hikingName.innerText = "Name: "
+              hikingDes.innerText = "Description: "
+              hikingDir.innerText = "Directions: "
+              resultsPage.append(hikingCard)
+              hikingCard.append(hikingName)
+              hikingCard.append(hikingDes)
+              hikingCard.append(hikingDir)
+            }
+
+            for(var i = 0; i<activitiesA.biking.length; i++){
+              var bikingCard = document.createElement("div")
+              var bikingName = document.createElement("p")
+              var bikingDes = document.createElement("p")
+              var bikingDir = document.createElement("p")
+              bikingName.innerText = "Name: "
+              bikingDes.innerText = "Description: "
+              bikingDir.innerText = "Biking Results"
+              resultsPage.append(bikingCard)
+              bikingCard.append(bikingName)
+              bikingCard.append(bikingDes)
+              bikingCard.append(bikingDir)
+            }
+
+            hikingDiv.innerText = "Hiking Results"
+            campDiv.innerText = "Camping Results"
+            bikingDiv.innerText = "Biking Results"
+
             console.log(activitiesA)
             console.log(cleanArray)
 
