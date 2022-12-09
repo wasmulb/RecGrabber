@@ -60,6 +60,9 @@ function recreationAPI() {
               campCard.append(campName)
               campCard.append(campDes)
               campCard.append(campDir)
+                campCard.addEventListener('click',function(){
+                    secondAPIFetch(activitiesA.biking[i].lat,activitiesA.biking[i].lon)
+                })
             }
 
             for(var i = 0; i<activitiesA.hiking.length; i++){
@@ -74,6 +77,9 @@ function recreationAPI() {
               hikingCard.append(hikingName)
               hikingCard.append(hikingDes)
               hikingCard.append(hikingDir)
+                hikingCard.addEventListener('click',function(){
+                    secondAPIFetch(activitiesA.biking[i].lat,activitiesA.biking[i].lon)
+                })
             }
 
             for(var i = 0; i<activitiesA.biking.length; i++){
@@ -88,6 +94,9 @@ function recreationAPI() {
               bikingCard.append(bikingName)
               bikingCard.append(bikingDes)
               bikingCard.append(bikingDir)
+                bikingCard.addEventListener('click',function(){
+                    secondAPIFetch(activitiesA.biking[i].lat,activitiesA.biking[i].lon)
+                })
             }
 
             hikingDiv.innerText = "Hiking Results"
@@ -105,7 +114,18 @@ function recreationAPI() {
 
 }
 
-
+function secondAPIFetch(lat, lon){
+    var finalURL="" +lat +lon;
+    console.log(lat,lon)
+    // fetch(finalURL)
+    //     .then(function(response){
+    //         return response.json()
+    //     })
+    //     .then(function(data){
+    //         console.log(data);
+    //
+    //     })
+}
 
 inputSearch.on('keyup', function(){
     cityName = inputSearch.val();
