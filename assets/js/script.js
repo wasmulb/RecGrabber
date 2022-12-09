@@ -21,13 +21,31 @@ function recreationAPI() {
             return response.json();
         })
         .then(function(data){
-            console.log(data);
-            var cleanArray = Object.values(data).filter(function(item){
-                return item.lat !== "0.0000"
-
-
+            let cleanArray = Object.values(data).filter(function(item){
+                return item.lat !== "0.0000";
             })
+
+            let activitiesA={
+                "camping":[],
+                "hiking":[],
+                "mountain biking":[]
+            }
+            for (let i = 0; i < cleanArray.length; i ++){
+                if("camping" in cleanArray[i].activities){
+                    activitiesA.camping.push(cleanArray[i]);
+                }
+                if("mountain biking" in cleanArray[i].activities){
+                    activitiesA["mountain biking"].push(cleanArray[i]);
+                }
+                if ("hiking" in cleanArray[i].activities){
+                    activitiesA.hiking.push(cleanArray[i]);
+                }
+
+            }
+            console.log(activitiesA)
             console.log(cleanArray)
+
+
         })
         .catch(err => console.error(err));
 
