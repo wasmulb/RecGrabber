@@ -109,11 +109,41 @@
     text-shadow: 4px 4px 2px #0a0a0a;
   }
 
-
-  /* for the about section */
-  .about {
+/* for the about section below */
   
-  }
+.four-up-feature{
+  text-align: center;
+  background-color: var(--tertiary-color);
+  color: white;
+  padding-bottom: 40px;
+  padding-top: 30px;
+}
+
+.four-up-feature .four-up-feature-header {
+  margin-bottom: 3rem;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: inline;
+  margin-bottom: 30px;
+}
+
+.four-up-feature .four-up-feature-image {
+  margin: 2rem;
+  max-width: 25%;
+}
+
+.four-up-feature {
+  margin-bottom: 2rem;
+}
+
+.narrowText{
+  display: inline-block;
+  max-width: 70%;
+
+}
+
+
+
   
   
   
