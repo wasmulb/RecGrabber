@@ -136,4 +136,5 @@ btn.on('click', function(e){
     e.preventDefault();
     recreationAPI();
     console.log(cityName)
-})
+    localStorage.setItem("cityName", JSON.stringify(cityName));
+});
