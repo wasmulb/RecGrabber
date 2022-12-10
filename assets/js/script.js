@@ -2,6 +2,9 @@ var inputSearch = $('#input-search');
 var cityName = inputSearch.val();
 var btn = $('#btn');
 var resultsPage = $('#results-page')
+var hikingColumn = $('#hiking-column')
+var bikingColumn = $('#biking-column')
+var campColumn = $('#camp-column')
 //API
 var apiKey = "219f127985msh142e87da4505be5p148cebjsn56aa6095e26c";
 var queryUrl = 'https://trailapi-trailapi.p.rapidapi.com/activity/?q-city_cont=';
@@ -56,7 +59,7 @@ function recreationAPI() {
               campName.innerText = "Name: "
               campDes.innerText = "Description: "
               campDir.innerText = "Directions: "
-              resultsPage.append(campCard)
+              campColumn.append(campCard)
               campCard.append(campName)
               campCard.append(campDes)
               campCard.append(campDir)
@@ -70,7 +73,7 @@ function recreationAPI() {
               hikingName.innerText = "Name: "
               hikingDes.innerText = "Description: "
               hikingDir.innerText = "Directions: "
-              resultsPage.append(hikingCard)
+              hikingColumn.append(hikingCard)
               hikingCard.append(hikingName)
               hikingCard.append(hikingDes)
               hikingCard.append(hikingDir)
@@ -84,7 +87,7 @@ function recreationAPI() {
               bikingName.innerText = "Name: "
               bikingDes.innerText = "Description: "
               bikingDir.innerText = "Biking Results"
-              resultsPage.append(bikingCard)
+              bikingColumn.append(bikingCard)
               bikingCard.append(bikingName)
               bikingCard.append(bikingDes)
               bikingCard.append(bikingDir)
