@@ -131,8 +131,17 @@ inputSearch.on("keyup", function () {
   cityName = inputSearch.val();
 });
 
+
 btn.on("click", function (e) {
   e.preventDefault();
   recreationAPI();
   console.log(cityName);
 });
+
+btn.on('click', function(e){
+    e.preventDefault();
+    recreationAPI();
+    console.log(cityName)
+    localStorage.setItem("cityName", JSON.stringify(cityName));
+});
+
