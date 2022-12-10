@@ -26,7 +26,7 @@ function recreationAPI() {
         })
         .then(function(data){
             let cleanArray = Object.values(data).filter(function(item){
-                return item.lat !== "0.0000";
+                return item.name !== "0.0000";
             })
 
             let activitiesA={
@@ -64,7 +64,7 @@ function recreationAPI() {
               campCard.append(campDes)
               campCard.append(campDir)
                 campCard.addEventListener('click',function(){
-                    secondAPIFetch(activitiesA.biking[i].lat,activitiesA.biking[i].lon)
+                    secondAPIFetch(activitiesA.camping[i].name)
                 })
             }
 
@@ -81,7 +81,7 @@ function recreationAPI() {
               hikingCard.append(hikingDes)
               hikingCard.append(hikingDir)
                 hikingCard.addEventListener('click',function(){
-                    secondAPIFetch(activitiesA.biking[i].lat,activitiesA.biking[i].lon)
+                    secondAPIFetch(activitiesA.hiking[i].name)
                 })
             }
 
@@ -98,7 +98,7 @@ function recreationAPI() {
               bikingCard.append(bikingDes)
               bikingCard.append(bikingDir)
                 bikingCard.addEventListener('click',function(){
-                    secondAPIFetch(activitiesA.biking[i].lat,activitiesA.biking[i].lon)
+                    secondAPIFetch(activitiesA.biking[i].name)
                 })
             }
 
@@ -117,9 +117,9 @@ function recreationAPI() {
 
 }
 
-function secondAPIFetch(lat, lon){
-    var finalURL="" +lat +lon;
-    console.log(lat,lon)
+function secondAPIFetch(name){
+    var finalURL="https://maps.googleapis.com/maps/api/staticmap?" +name;
+    console.log(name)
     // fetch(finalURL)
     //     .then(function(response){
     //         return response.json()
@@ -136,6 +136,7 @@ inputSearch.on('keyup', function(){
 })
 
 btn.on('click', function(e){
+
     e.preventDefault();
     recreationAPI();
     console.log(cityName)
