@@ -151,11 +151,10 @@
 
 
 #results-page div {
-  display: flex;
+  display: inline;
   flex-direction: column;
   flex: 1 0 auto;
 
 }
-  
-  
+
   
