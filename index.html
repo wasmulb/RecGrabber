@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./assets/css/app.css">
-    <link rel="stylesheet" href="./assets/css/foundation.css">
-    <link rel="stylesheet" href="./assets/css/foundation.min.css">
+    <link rel="stylesheet" href="./assets/css/app.css" />
+    <link rel="stylesheet" href="./assets/css/foundation.css" />
+    <link rel="stylesheet" href="./assets/css/foundation.min.css" />
     <link rel="stylesheet" href="./assets/css/custom.css" />
     <title>RecGrabber</title>
   </head>
-    <body>
-  <!-- hero banner -->
+  <body>
+    <!-- hero banner -->
     <div class="hero-section">
       <div class="hero-section-text">
         <h1>RecGrabber</h1>
@@ -21,63 +21,96 @@
     <!-- search bar banner -->
     <header class="subnav-hero-section">
       <div class="input-group input-group-rounded">
-        <input id="input-search" class="input-group-field" type="search" placeholder="Enter city name here">
+        <input
+          id="input-search"
+          class="input-group-field"
+          type="search"
+          placeholder="Enter city name here"
+        />
         <div class="input-group-button">
-          <input id="btn" type="submit" class="button secondary" value="Search">
+          <input
+            id="btn"
+            type="submit"
+            class="button secondary"
+            value="Search"
+          />
         </div>
       </div>
-      <h1 class="subnav-hero-headline">Search <small>for trails or campsites by location</small></h1>
-      <ul class="subnav-hero-subnav">
-      </ul>
+      <h1 class="subnav-hero-headline">
+        Search <small>for trails or campsites by location</small>
+      </h1>
+      <ul class="subnav-hero-subnav"></ul>
     </header>
     <!-- results page -->
     <section id="results-page">
-      <div id = "hiking-column"></div>
-      <div id = "biking-column"></div>
-      <div id = "camp-column"></div>
+      <div id="hiking-column"></div>
+      <div id="biking-column"></div>
+      <div id="camp-column"></div>
     </section>
 
-     <!-- about section -->
-      <section class="four-up-feature">
-        <div class="row four-up-feature-header align-center">
-          <div class="medium-4 columns">
-            <h2>About</h2>
-            <h5 class = "narrowText"> This web application was made to locate trails and campsites around a city of your choice. This was a project
-              for a fullstack development bootcamp through the University of Washington. We hope this website gets
-              you into the great outdoors!</h5>
-          </div>
+    <!-- about section -->
+    <section class="four-up-feature">
+      <div class="row four-up-feature-header align-center">
+        <div class="medium-4 columns">
+          <h2>About</h2>
+          <h5 class="narrowText">
+            This web application was made to locate trails and campsites around
+            a city of your choice. This was a project for a fullstack
+            development bootcamp through the University of Washington. We hope
+            this website gets you into the great outdoors!
+          </h5>
         </div>
-        <div class="row align-spaced">
-          <div class="small-4 medium-3 columns">
-            <img class="four-up-feature-image" src= "./assets/images/50425337706_e4479c2396_o.jpg" alt="icon">
-            <h3>Contributors</h3>
-              <p>Joon</p>
-              <p>Levi</p>
-              <p>Conner</p>
-          </div>
-          <div class="small-4 medium-3 columns">
-            <img class="four-up-feature-image" src="./assets/images/49616871907_b91614dbd9_o.jpg" alt="icon">
-            <h3>APIs Used</h3>
-            <p>Trail API</p>
-            <p>Google Maps API</p>
-             
-          </div>
-          <div class="small-4 medium-3 columns">
-            <img class="four-up-feature-image" src="./assets/images/49616100583_638126e1a4_o.jpg" alt="icon">
-            <h3>Photo Credit</h3>
-            <p>Jonathan Miske</p>
-          </div>
+      </div>
+      <div class="row align-spaced">
+        <div class="small-4 medium-3 columns">
+          <img
+            class="four-up-feature-image"
+            src="./assets/images/50425337706_e4479c2396_o.jpg"
+            alt="icon"
+          />
+          <h3>Contributors</h3>
+          <p>Joon</p>
+          <p>Levi</p>
+          <p>Conner</p>
         </div>
-      </section>
-    
+        <div class="small-4 medium-3 columns">
+          <img
+            class="four-up-feature-image"
+            src="./assets/images/49616871907_b91614dbd9_o.jpg"
+            alt="icon"
+          />
+          <h3>APIs Used</h3>
+          <p>Trail API</p>
+          <p>Google Maps API</p>
+        </div>
+        <div class="small-4 medium-3 columns">
+          <img
+            class="four-up-feature-image"
+            src="./assets/images/49616100583_638126e1a4_o.jpg"
+            alt="icon"
+          />
+          <h3>Photo Credit</h3>
+          <p>Jonathan Miske</p>
+        </div>
+      </div>
+    </section>
+
     <!-- scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
-    crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
-    crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
