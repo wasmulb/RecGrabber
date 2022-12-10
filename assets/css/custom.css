@@ -143,8 +143,19 @@
 }
 
 /* results page */
+#results-page {
+  display:flex;
+  flex-direction: row;
+
+}
 
 
+#results-page div {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+
+}
   
   
   
