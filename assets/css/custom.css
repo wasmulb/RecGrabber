@@ -157,4 +157,12 @@
 
 }
 
-  
+#hiking-div {
+    display: none;
+}
+#biking-div {
+    display: none;
+}
+#camping-div{
+    display: none;
+}
