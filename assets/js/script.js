@@ -59,13 +59,11 @@ function recreationAPI() {
               var campDir = document.createElement("p")
               campName.innerText = "Name: " + activitiesA.camping[i].name
               campDes.innerText = "Description: "
-              campDir.innerText = "Directions: "
-            //   campColumn.append(campCard)
+              campDir.innerText = "Click for directions!"
               campCard.append(campName)
               campCard.append(campDes)
               campCard.append(campDir)
                 campCard.addEventListener('click',function(event){
-                    // console.log(event.target.innerText)
                     var queryName = this.querySelector(".name").innerText.substr(6)
                     secondAPIFetch(queryName)
             
@@ -76,36 +74,40 @@ function recreationAPI() {
             for(var i = 0; i<activitiesA.hiking.length; i++){
               var hikingCard = document.createElement("div")
               var hikingName = document.createElement("p") 
+              hikingName.classList.add ("name")
               var hikingDes = document.createElement("p")
               var hikingDir = document.createElement("p")
               hikingName.innerText = "Name: " + activitiesA.hiking[i].name
               hikingDes.innerText = "Description: "
-              hikingDir.innerText = "Directions: "
-              hikingColumn.append(hikingCard)
+              hikingDir.innerText = "Click for directions!"
               hikingCard.append(hikingName)
               hikingCard.append(hikingDes)
               hikingCard.append(hikingDir)
-                hikingCard.addEventListener('click',function(){
-                    secondAPIFetch(hikingName)
+                hikingCard.addEventListener('click',function(event){
+                    var queryName = this.querySelector(".name").innerText.substr(6)
+                    secondAPIFetch(queryName)
                 })
+                hikingColumn.append(hikingCard)
             }
 
             for(var i = 0; i<activitiesA.biking.length; i++){
               var bikingCard = document.createElement("div")
               var bikingName = document.createElement("p")
+              bikingName.classList.add ("name")
               var bikingDes = document.createElement("p")
               var bikingDir = document.createElement("p")
               bikingName.innerText = "Name: " + activitiesA.biking[i].name
               bikingDes.innerText = "Description: "
-              bikingDir.innerText = "Biking Results"
-              bikingColumn.append(bikingCard)
+              bikingDir.innerText = "Click for directions!"
               bikingCard.append(bikingName)
               bikingCard.append(bikingDes)
               bikingCard.append(bikingDir)
-              bikingCard.addEventListener('click',function(){
-                  secondAPIFetch(bikingName)
+                bikingCard.addEventListener('click',function(event){
+                    var queryName = this.querySelector(".name").innerText.substr(6)
+                  secondAPIFetch(queryName)
 
                 })
+                bikingColumn.append(bikingCard)
             }
 
             hikingDiv.innerText = "Hiking Results"
@@ -126,15 +128,6 @@ function recreationAPI() {
 function secondAPIFetch(name){
     var finalURL="https://www.google.com/maps/embed/v1/place?key=AIzaSyAkKP3neW1E5ARIwiRpMHc6pnfObzz3qpk&q="+name;
     window.open (finalURL)
-    // console.log(name)
-    // fetch(finalURL)
-    //     .then(function(response){
-    //         return response.json()
-    //     })
-    //     .then(function(data){
-    //         console.log(data);
-    //
-    //     })
 }
 
 inputSearch.on('keyup', function(){
