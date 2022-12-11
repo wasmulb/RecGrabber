@@ -10,7 +10,9 @@ var apiKey = "219f127985msh142e87da4505be5p148cebjsn56aa6095e26c";
 var queryUrl = 'https://trailapi-trailapi.p.rapidapi.com/activity/?q-city_cont=';
 
 function recreationAPI() {
-
+    hikingColumn.empty();
+    bikingColumn.empty();
+    campColumn.empty();
     const options = {
         method: 'GET',
         headers: {
