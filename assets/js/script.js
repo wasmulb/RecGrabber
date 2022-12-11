@@ -56,7 +56,7 @@ function recreationAPI() {
               var campName = document.createElement("p")
               var campDes = document.createElement("p")
               var campDir = document.createElement("p")
-              campName.innerText = "Name: "
+              campName.innerText = "Name: " + activitiesA.camping[i].name
               campDes.innerText = "Description: "
               campDir.innerText = "Directions: "
               campColumn.append(campCard)
@@ -64,7 +64,7 @@ function recreationAPI() {
               campCard.append(campDes)
               campCard.append(campDir)
                 campCard.addEventListener('click',function(){
-                    secondAPIFetch(activitiesA.camping[i].name)
+                    secondAPIFetch(campName)
                 })
             }
 
@@ -73,7 +73,7 @@ function recreationAPI() {
               var hikingName = document.createElement("p") 
               var hikingDes = document.createElement("p")
               var hikingDir = document.createElement("p")
-              hikingName.innerText = "Name: "
+              hikingName.innerText = "Name: " + activitiesA.hiking[i].name
               hikingDes.innerText = "Description: "
               hikingDir.innerText = "Directions: "
               hikingColumn.append(hikingCard)
@@ -81,7 +81,7 @@ function recreationAPI() {
               hikingCard.append(hikingDes)
               hikingCard.append(hikingDir)
                 hikingCard.addEventListener('click',function(){
-                    secondAPIFetch(activitiesA.hiking[i].name)
+                    secondAPIFetch(hikingName)
                 })
             }
 
@@ -90,15 +90,16 @@ function recreationAPI() {
               var bikingName = document.createElement("p")
               var bikingDes = document.createElement("p")
               var bikingDir = document.createElement("p")
-              bikingName.innerText = "Name: "
+              bikingName.innerText = "Name: " + activitiesA.biking[i].name
               bikingDes.innerText = "Description: "
               bikingDir.innerText = "Biking Results"
               bikingColumn.append(bikingCard)
               bikingCard.append(bikingName)
               bikingCard.append(bikingDes)
               bikingCard.append(bikingDir)
-                bikingCard.addEventListener('click',function(){
-                    secondAPIFetch(activitiesA.biking[i].name)
+              bikingCard.addEventListener('click',function(){
+                  secondAPIFetch(bikingName)
+
                 })
             }
 
@@ -142,3 +143,5 @@ btn.on('click', function(e){
     console.log(cityName)
     localStorage.setItem("cityName", JSON.stringify(cityName));
 });
+
+
