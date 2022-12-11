@@ -54,18 +54,23 @@ function recreationAPI() {
             for(var i = 0; i<activitiesA.camping.length; i++){
               var campCard = document.createElement("div")
               var campName = document.createElement("p")
+              campName.classList.add ("name")
               var campDes = document.createElement("p")
               var campDir = document.createElement("p")
               campName.innerText = "Name: " + activitiesA.camping[i].name
               campDes.innerText = "Description: "
               campDir.innerText = "Directions: "
-              campColumn.append(campCard)
+            //   campColumn.append(campCard)
               campCard.append(campName)
               campCard.append(campDes)
               campCard.append(campDir)
-                campCard.addEventListener('click',function(){
-                    secondAPIFetch(campName)
+                campCard.addEventListener('click',function(event){
+                    // console.log(event.target.innerText)
+                    var queryName = this.querySelector(".name").innerText.substr(6)
+                    secondAPIFetch(queryName)
+            
                 })
+                campColumn.append(campCard)
             }
 
             for(var i = 0; i<activitiesA.hiking.length; i++){
@@ -119,8 +124,9 @@ function recreationAPI() {
 }
 
 function secondAPIFetch(name){
-    var finalURL="https://maps.googleapis.com/maps/api/staticmap?" +name;
-    console.log(name)
+    var finalURL="https://www.google.com/maps/embed/v1/place?key=AIzaSyAkKP3neW1E5ARIwiRpMHc6pnfObzz3qpk&q="+name;
+    window.open (finalURL)
+    // console.log(name)
     // fetch(finalURL)
     //     .then(function(response){
     //         return response.json()
