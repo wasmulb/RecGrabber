@@ -52,15 +52,19 @@ function recreationAPI() {
             var hikingDiv = document.createElement("h2")
             var campDiv = document.createElement("h2")
             var bikingDiv = document.createElement("h2")
+            campColumn.append(campDiv)
+            hikingColumn.append(hikingDiv)
+            bikingColumn.append(bikingDiv)
 
             for(var i = 0; i<activitiesA.camping.length; i++){
               var campCard = document.createElement("div")
+              campCard.classList.add("rCard")
               var campName = document.createElement("p")
               campName.classList.add ("name")
               var campDes = document.createElement("p")
               var campDir = document.createElement("p")
               campName.innerText = "Name: " + activitiesA.camping[i].name
-              campDes.innerText = "Description: "
+              campDes.innerText = "Description: " +activitiesA.camping[i].description
               campDir.innerText = "Click for directions!"
               campCard.append(campName)
               campCard.append(campDes)
@@ -75,12 +79,13 @@ function recreationAPI() {
 
             for(var i = 0; i<activitiesA.hiking.length; i++){
               var hikingCard = document.createElement("div")
+              hikingCard.classList.add("rCard")
               var hikingName = document.createElement("p") 
               hikingName.classList.add ("name")
               var hikingDes = document.createElement("p")
               var hikingDir = document.createElement("p")
               hikingName.innerText = "Name: " + activitiesA.hiking[i].name
-              hikingDes.innerText = "Description: "
+              hikingDes.innerText = "Description: " +activitiesA.hiking[i].description
               hikingDir.innerText = "Click for directions!"
               hikingCard.append(hikingName)
               hikingCard.append(hikingDes)
@@ -94,12 +99,13 @@ function recreationAPI() {
 
             for(var i = 0; i<activitiesA.biking.length; i++){
               var bikingCard = document.createElement("div")
+              bikingCard.classList.add("rCard")
               var bikingName = document.createElement("p")
               bikingName.classList.add ("name")
               var bikingDes = document.createElement("p")
               var bikingDir = document.createElement("p")
               bikingName.innerText = "Name: " + activitiesA.biking[i].name
-              bikingDes.innerText = "Description: "
+              bikingDes.innerText = "Description: " +activitiesA.biking[i].description
               bikingDir.innerText = "Click for directions!"
               bikingCard.append(bikingName)
               bikingCard.append(bikingDes)

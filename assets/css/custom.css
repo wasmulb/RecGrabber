@@ -146,12 +146,15 @@
 #results-page {
   display:flex;
   flex-direction: row;
-
+  background-color: var(--secondary-color);
+  color: #fefefe;
 }
 
+#results-page h2 {
+  padding: 5px;
+}
 
 #results-page div {
-  display: inline;
   flex-direction: column;
   flex: 1 0 auto;
 
@@ -165,4 +168,23 @@
 }
 #camping-div{
     display: none;
+}
+
+/* card styles */
+.rCard {
+  border: #0a0a0a solid;
+  border-radius: 10px;
+  margin: 5px;
+  background-color: var(--tertiary-color);
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+.rCard:hover {
+  cursor: pointer;
+  transform: scale(1.05)
+}
+.rCard p {
+  margin: 3px;
+  
 }
