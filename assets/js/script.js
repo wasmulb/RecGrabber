@@ -59,7 +59,7 @@ function recreationAPI() {
             for(var i = 0; i<activitiesA.camping.length; i++){
               var campCard = document.createElement("div")
               campCard.classList.add("rCard")
-              var campName = document.createElement("p")
+              var campName = document.createElement("h4")
               campName.classList.add ("name")
               var campDes = document.createElement("p")
               var campDir = document.createElement("p")
@@ -80,7 +80,7 @@ function recreationAPI() {
             for(var i = 0; i<activitiesA.hiking.length; i++){
               var hikingCard = document.createElement("div")
               hikingCard.classList.add("rCard")
-              var hikingName = document.createElement("p") 
+              var hikingName = document.createElement("h4")
               hikingName.classList.add ("name")
               var hikingDes = document.createElement("p")
               var hikingDir = document.createElement("p")
@@ -100,7 +100,7 @@ function recreationAPI() {
             for(var i = 0; i<activitiesA.biking.length; i++){
               var bikingCard = document.createElement("div")
               bikingCard.classList.add("rCard")
-              var bikingName = document.createElement("p")
+              var bikingName = document.createElement("h4")
               bikingName.classList.add ("name")
               var bikingDes = document.createElement("p")
               var bikingDir = document.createElement("p")
