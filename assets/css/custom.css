@@ -8,7 +8,16 @@
     --sixth-color: rgb(100,91,22);
 }
 
+p {
+    word-wrap: break-word;
+}
+
+h4 {
+    letter-spacing: .1ch;
+}
+
 /* NAV BAR */
+
 
 .subnav-hero-section {
     text-align: center;
@@ -188,3 +197,4 @@
   margin: 3px;
   
 }
+
