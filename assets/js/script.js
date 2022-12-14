@@ -68,7 +68,8 @@ function recreationAPI() {
               campName.classList.add ("name");
               var campDes = document.createElement("p");
               var campDir = document.createElement("p");
-              campName.innerText = "Name: " + activitiesA.camping[i].name;
+              campDir.classList.add("dir");
+              campName.innerText =  activitiesA.camping[i].name;
               campDes.innerText = "Description: " +activitiesA.camping[i].description;
               campDir.innerText = "Click for directions!";
               campCard.append(campName);
@@ -91,7 +92,8 @@ function recreationAPI() {
               hikingName.classList.add ("name");
               var hikingDes = document.createElement("p");
               var hikingDir = document.createElement("p");
-              hikingName.innerText = "Name: " + activitiesA.hiking[i].name;
+              hikingDir.classList.add("dir");
+              hikingName.innerText =  activitiesA.hiking[i].name;
               hikingDes.innerText = "Description: " +activitiesA.hiking[i].description;
               hikingDir.innerText = "Click for directions!";
               hikingCard.append(hikingName);
@@ -112,7 +114,8 @@ function recreationAPI() {
               bikingName.classList.add ("name");
               var bikingDes = document.createElement("p");
               var bikingDir = document.createElement("p");
-              bikingName.innerText = "Name: " + activitiesA.biking[i].name;
+              bikingDir.classList.add("dir");
+              bikingName.innerText =  activitiesA.biking[i].name;
               bikingDes.innerText = "Description: " +activitiesA.biking[i].description;
               bikingDir.innerText = "Click for directions!";
               bikingCard.append(bikingName);
