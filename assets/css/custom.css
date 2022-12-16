@@ -157,6 +157,7 @@ h4 {
   flex-direction: row;
   background-color: var(--secondary-color);
   color: #fefefe;
+  padding: 10px;
 }
 
 #results-page h2 {
@@ -182,22 +183,36 @@ h4 {
 /* card styles */
 .rCard {
   border: #0a0a0a solid;
+  padding: 3px;
   border-radius: 10px;
   margin: 5px;
   background-color: var(--tertiary-color);
   display: flex;
   flex-direction: column;
   max-width: 400px;
+  text-align: center;
 }
 .rCard:hover {
   cursor: pointer;
-  transform: scale(1.05)
+  transform: scale(1.05);
+  cursor: pointer;
 }
 .rCard p {
   margin: 3px;
-  
+}
+.name {
+    background-color: #8a8a8a;
+    border-radius: 10px;
 }
 
+.dir {
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background-color: #8a8a8a;
+    border: solid 1px white;
+    border-radius: 10px;
+}
 @media screen and (max-width: 980px){
   #results-page {
     display:flex;
