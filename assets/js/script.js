@@ -76,7 +76,7 @@ function recreationAPI() {
               campCard.append(campDes);
               campCard.append(campDir);
                 campCard.addEventListener('click',function(event){
-                    var queryName = this.querySelector(".name").innerText.substr(6);
+                    var queryName = this.querySelector(".name").innerText;
                     secondAPIFetch(queryName);
             
                 })
@@ -100,7 +100,7 @@ function recreationAPI() {
               hikingCard.append(hikingDes);
               hikingCard.append(hikingDir);
                 hikingCard.addEventListener('click',function(event){
-                    var queryName = this.querySelector(".name").innerText.substr(6);
+                    var queryName = this.querySelector(".name").innerText;
                     secondAPIFetch(queryName);
                 })
                 hikingColumn.append(hikingCard);
@@ -122,7 +122,7 @@ function recreationAPI() {
               bikingCard.append(bikingDes);
               bikingCard.append(bikingDir);
                 bikingCard.addEventListener('click',function(event){
-                    var queryName = this.querySelector(".name").innerText.substr(6);
+                    var queryName = this.querySelector(".name").innerText;
                   secondAPIFetch(queryName);
 
                 })
@@ -142,6 +142,7 @@ function recreationAPI() {
 }
 // Once Card is clicked, it will trigger this google api call with the name and the location of the map.
 function secondAPIFetch(name){
+    console.log(name)
     var finalURL="https://www.google.com/maps/embed/v1/place?key=AIzaSyAkKP3neW1E5ARIwiRpMHc6pnfObzz3qpk&q="+name;
     window.open (finalURL);
 }
